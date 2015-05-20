@@ -1,6 +1,12 @@
 require 'sinatra/base'
 
 class SinatraRig < Sinatra::Base
+
+	configure do
+    set :global_object, Object.new
+    # just for example, check features/support/env.rb
+  end
+
   get '/' do
     erb :index
   end

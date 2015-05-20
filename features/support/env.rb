@@ -19,3 +19,8 @@ end
 World do
   SinatraRigWorld.new
 end
+
+Before do |scenario|
+  Capybara.app.settings.global_object = Object.new
+  # check global_object in app.rb
+end
