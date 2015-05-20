@@ -4,4 +4,4 @@ Feature: Simple Viewing
 
 	Scenario: Go to the main page and see a welcome message
 		Given I am on the main page
-		Then I should see 'hello there!'
+		Then I should see 'Hello'

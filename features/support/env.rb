@@ -3,6 +3,7 @@
 ENV['RACK_ENV'] = 'test'
 
 require File.join(File.dirname(__FILE__), '..', '..', 'lib/app.rb')
+require File.join(File.dirname(__FILE__), '..', '..', 'lib/test.rb')
 
 require 'capybara'
 require 'capybara/cucumber'
@@ -21,6 +22,6 @@ World do
 end
 
 Before do |scenario|
-  Capybara.app.settings.global_object = Object.new
-  # check global_object in app.rb
+  Capybara.app.settings.global_test = Test.new
+  # check global_test in app.rb
 end
